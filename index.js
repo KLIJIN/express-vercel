@@ -1,8 +1,23 @@
 import express from "express";
+import morgan from "morgan";
+import cors from "cors";
+import dotenv from "dotenv";
+
 import { lol } from "./db.js";
 const app = express();
 
-app.use(express.json({ extended: false }));
+//middlewares
+app.use(cors());
+app.use(function (req, res, next) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+});
+
+app.use(morgan("dev")); //http requests logger
+app.use(express.json()); //для того что бы использовать req.body
 
 app.get("/api/api/mine", (req, res) => {
   console.log("===================================");
