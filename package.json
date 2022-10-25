@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "nodemon": "node index.js"
+    "nodemon": "nodemon index.js"
   },
   "repository": {
     "type": "git",

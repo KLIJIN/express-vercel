@@ -30,40 +30,52 @@ app.get("/api/api/mine", (req, res) => {
   res.json(lol);
 });
 
-app.get("/api/api/lava?idmine=2296", (req, res) => {
-  console.log("===================================");
-  console.log("231 req.method", req.method);
-  console.log("232 req.body", req.body);
-  console.log("232 res", res);
-  // res.json(123);
-  console.log("===================================");
-  // res.status(200).send("Its ok");
-  res.json(bbb);
-});
+// app.get("/api/api/lava?idmine=2296", (req, res) => {
+//   console.log("===================================");
+//   console.log("231 req.method", req.method);
+//   console.log("232 req.body", req.body);
+// //   console.log("232 res", res);
+//   // res.json(123);
+//   console.log("===================================");
+//   // res.status(200).send("Its ok");
+//   res.json(bbb);
+// });
 
-app.get("/api/Limits?idLava=10563", (req, res) => {
+app.get("/api/api/lava", (req, res) => {
+    console.log("===================================");
+    console.log("231 req.method", req.method);
+    console.log("232 req.body", req.body);
+    // console.log("232 res", res);
+    // res.json(123);
+    console.log("===================================");
+    // res.status(200).send("Its ok");
+    res.json(bbb);
+  });
+
+
+app.get("/api/Limits", (req, res) => {
   console.log("===================================");
   console.log("231 req.method", req.method);
   console.log("232 req.body", req.body);
-  console.log("232 res", res);
+//   console.log("232 res", res);
   // res.json(123);
   console.log("===================================");
   // res.status(200).send("Its ok");
   res.json(ccc);
 });
 
-app.get("/api/Diagnostic?idsector=10563", (req, res) => {
+app.get("/api/Diagnostic", (req, res) => {
   console.log("===================================");
   console.log("231 req.method", req.method);
   console.log("232 req.body", req.body);
-  console.log("232 res", res);
+//   console.log("232 res", res);
   // res.json(123);
   console.log("===================================");
   // res.status(200).send("Its ok");
   res.json(ddd);
 });
 
-app.get("/api/GetCheckLists?idsector=10563", (req, res) => {
+app.get("/api/GetCheckLists", (req, res) => {
   console.log("===================================");
   // console.log("231 req.method", req.method);
   // console.log("232 req.body", req.body);
