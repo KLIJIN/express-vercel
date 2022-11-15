@@ -10,9 +10,12 @@ const app = express();
 app.use(cors());
 app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, HEAD, PUT, PATCH, POST, DELETE"
+  );
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.setHeader("Access-Control-Allow-Credentials", true);
+  res.setHeader("Access-Control-Allow-Credentials", "*");
   next();
 });
 
@@ -42,22 +45,21 @@ app.get("/api/api/mine", (req, res) => {
 // });
 
 app.get("/api/api/lava", (req, res) => {
-    console.log("===================================");
-    console.log("231 req.method", req.method);
-    console.log("232 req.body", req.body);
-    // console.log("232 res", res);
-    // res.json(123);
-    console.log("===================================");
-    // res.status(200).send("Its ok");
-    res.json(bbb);
-  });
-
+  console.log("===================================");
+  console.log("231 req.method", req.method);
+  console.log("232 req.body", req.body);
+  // console.log("232 res", res);
+  // res.json(123);
+  console.log("===================================");
+  // res.status(200).send("Its ok");
+  res.json(bbb);
+});
 
 app.get("/api/Limits", (req, res) => {
   console.log("===================================");
   console.log("231 req.method", req.method);
   console.log("232 req.body", req.body);
-//   console.log("232 res", res);
+  //   console.log("232 res", res);
   // res.json(123);
   console.log("===================================");
   // res.status(200).send("Its ok");
@@ -68,7 +70,7 @@ app.get("/api/Diagnostic", (req, res) => {
   console.log("===================================");
   console.log("231 req.method", req.method);
   console.log("232 req.body", req.body);
-//   console.log("232 res", res);
+  //   console.log("232 res", res);
   // res.json(123);
   console.log("===================================");
   // res.status(200).send("Its ok");
